@@ -127,7 +127,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(html.encode("utf-8"))
 
 class Server(socketserver.TCPServer):
-    allow_reuse_address = True
+    allow_reuse_address = True 
 
 httpd = Server(('0.0.0.0', 8000), Handler)
 httpd.serve_forever()
